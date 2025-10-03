@@ -1,0 +1,109 @@
+:root {
+  --bg: #0f1520;
+  --bg-elev: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #60a5fa;
+  --accent-press: #3b82f6;
+  --border: #1f2937;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: var(--bg-elev);
+  border-bottom: 1px solid var(--border);
+}
+.app-header h1 { margin: 0; font-size: 20px; }
+.app-header button {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.container { max-width: 720px; margin: 24px auto; padding: 0 16px; }
+
+.new-task {
+  display: flex;
+  gap: 8px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+}
+.new-task input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-size: 16px;
+  outline: none;
+}
+.new-task button {
+  background: var(--accent);
+  color: #0b1020;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+.new-task button:hover { background: var(--accent-press); }
+
+.task-list { list-style: none; padding: 0; margin: 16px 0 0; }
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-elev);
+}
+.task-item + .task-item { margin-top: 10px; }
+.task-title { flex: 1; }
+.task-actions { display: flex; gap: 8px; }
+.task-actions button {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+.task-actions button:hover { color: var(--text); }
+.task-completed { text-decoration: line-through; color: var(--muted); }
+
+.footer {
+  margin: 40px auto;
+  max-width: 720px;
+  padding: 12px 16px;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* Light mode fallback when prefers-color-scheme: light and toggled */
+.light {
+  --bg: #f8fafc;
+  --bg-elev: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --accent: #2563eb;
+  --accent-press: #1d4ed8;
+  --border: #e5e7eb;
+  color-scheme: light;
+}

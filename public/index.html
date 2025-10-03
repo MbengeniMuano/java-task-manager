@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tasks – Minimal Dark</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>Tasks</h1>
+      <button id="themeToggle" aria-label="Toggle dark mode">🌗</button>
+    </header>
+
+    <main class="container">
+      <form id="newTaskForm" class="new-task">
+        <input id="newTaskInput" type="text" placeholder="Add a task…" aria-label="New task" />
+        <button type="submit">Add</button>
+      </form>
+
+      <ul id="taskList" class="task-list"></ul>
+    </main>
+
+    <footer class="footer"></footer>
+
+    <script src="app.js"></script>
+  </body>
+  </html>
