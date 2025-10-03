@@ -62,3 +62,6 @@ Notes
 - Data is stored in memory and resets when the server restarts.
 - The frontend is intentionally minimal for clarity and learning.
 
+License
+- MIT © 2025 Mbengeni Muano. See `LICENSE` for full text.
+
