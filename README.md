@@ -62,5 +62,3 @@ Notes
 - Data is stored in memory and resets when the server restarts.
 - The frontend is intentionally minimal for clarity and learning.
 
-Screenshots
-- Add your own screenshots by placing images in `public/` and referencing them here.
